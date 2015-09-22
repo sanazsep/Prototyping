@@ -48,7 +48,7 @@ namespace Labb_1_Agilametoder_SUW
         {
             textBox1.Clear(); textBox2.Clear(); textBox3.Clear();
         }
-
+        //det här är en knapp
         private void button3_Click(object sender, EventArgs e)
         {
 
