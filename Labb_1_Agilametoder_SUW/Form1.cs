@@ -43,6 +43,7 @@ namespace Labb_1_Agilametoder_SUW
             }
             Stuff();
         }
+        //This is stuff
         private void Stuff()
         {
             textBox1.Clear(); textBox2.Clear(); textBox3.Clear();
