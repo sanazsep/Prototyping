@@ -12,34 +12,36 @@ namespace Labb_1_Agilametoder_SUW
 {
     public partial class Form1 : Form
     {
-        List<String> Stringlist = new List<string>();
+        List<String> AddressList = new List<string>();
         public Form1()
         {
             InitializeComponent();
-            Stringlist.Add("Namn     Mejl     Nummer");
-            Stringlist.Add("Bengt     benga55@gmail.com     0701234567");
-            Stringlist.Add("Peter     ptr@hotspot.com     0701234576");
-            Stringlist.Add("Lina     lina_w@gmail.com     0701239654");
-            Stringlist.Add("Ahmed     ahmed_ahmed@gmail.com     0707654321");
-            Stringlist.Add("Angelica     angelangelica@gmail.com     0701212125");
-            Stringlist.Add("Olof     olof_olofsson5@gmail.com     0702223336");
-            Stringlist.Add("Clara     stensson_c@gmail.com     0730456789");
-            Stringlist.Add("Stina     stinastinastinastina@hotmail.com     0700554412");
-            Stringlist.Add("Bertil     beritochbertil@telia.com     0700000258");
+            //Information about each objects
+            AddressList.Add("Name\tE-mail\tNumber");
+            AddressList.Add("Bengt\tbenga55@gmail.com\t0701234567");
+            AddressList.Add("Peter\tptr@hotspot.com\t0701234576");
+            AddressList.Add("Lina\tlina_w@gmail.com\t0701239654");
+            AddressList.Add("Ahmed\tahmed_ahmed@gmail.com\t0707654321");
+            AddressList.Add("Angelica\tangelangelica@gmail.com\t0701212125");
+            AddressList.Add("Olof\tolof_olofsson5@gmail.com\t0702223336");
+            AddressList.Add("Clara\tstensson_c@gmail.com\t0730456789");
+            AddressList.Add("Stina\tstinastinastinastina@hotmail.com\t0700554412");
+            AddressList.Add("Bertil\tberitochbertil@telia.com\t0700000258");
+
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Stringlist.Add(textBox1.Text +"     "+ textBox2.Text + "     "+ textBox3.Text);
+            AddressList.Add(textBox1.Text +"     "+ textBox2.Text + "     "+ textBox3.Text);
             Stuff();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int i = 0;while(i < Stringlist.Count)
+            int i = 0;while(i < AddressList.Count)
             {
-                listBox1.Items.Add(Stringlist.ElementAt(i));i++;
+                listBox1.Items.Add(AddressList.ElementAt(i));i++;
             }
             Stuff();
         }
@@ -53,8 +55,8 @@ namespace Labb_1_Agilametoder_SUW
         {
 
             string str = textBox4.Text;int i = 0;
-            while (i < Stringlist.Count)
-            {if (Stringlist.ElementAt(i).Contains(str)){    MessageBox.Show("Hittade: " + Stringlist.ElementAt(i)); i++;}else
+            while (i < AddressList.Count)
+            {if (AddressList.ElementAt(i).Contains(str)){    MessageBox.Show("Hittade: " + AddressList.ElementAt(i)); i++;}else
                 {MessageBox.Show("Nope"); i++; }}
         }
     }
